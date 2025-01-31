@@ -14,12 +14,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = 'China Market';
+const description = "China Market Wan Jia Long";
+
 export const metadata: Metadata = {
   title: {
-    default: 'China Market',
-    template: '%s | China Market',
+    default: title,
+    template: '%s | ' + title,
   },
-  description: "China Market Wan Jia Long",
+  description: description,
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+  openGraph: {
+    title: title,
+    description: description,
+    images: [
+      {
+        url: 'https://chinamarket.fr/logo.svg',
+        alt: title,
+      },
+    ],
+    type: 'website',
+    url: 'https://chinamarket.fr',
+    siteName: title,
+  },
   creator: 'Zhi-Sheng Trieu',
   keywords: ['China market', 'Wan Jia Long', 'Nancy', 'Epicerie', 'Familiale'],
 };
@@ -30,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
