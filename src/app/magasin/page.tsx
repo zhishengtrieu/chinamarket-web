@@ -2,6 +2,10 @@ export const metadata = {
   title: "Notre magasin",
 };
 
+/*
+  <p className="mb-2"><strong>Email :</strong> contact@chinamarket.fr</p>
+*/
+
 export default function AboutHome() {
   return (
     <main className="flex-1 bg-background">
@@ -26,7 +30,6 @@ export default function AboutHome() {
             <h2 className="text-2xl font-semibold mb-4">Informations pratiques</h2>
             <p className="mb-2"><strong>Adresse :</strong> 1 Rue Villebois Mareuil, 54000 Nancy</p>
             <p className="mb-2"><strong>Téléphone :</strong> 03 83 27 97 59</p>
-            <p className="mb-2"><strong>Email :</strong> contact@chinamarket.fr</p>
           </article>
 
           <article className="bg-white p-6 shadow-md rounded-lg">

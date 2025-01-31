@@ -9,7 +9,7 @@ interface HamburgerNavProps {
 
 export default function HamburgerNav({ onClose }: HamburgerNavProps) {
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center bg-white text-black overflow-y-hidden">
+    <div className="fixed inset-0 z-50 flex justify-center items-center bg-[#ED1C24] text-[#FFF200] overflow-y-hidden">
       <button className="p-2 fixed top-0 right-0 flex justify-end" onClick={onClose}>
         <CircleX className=" size-10" />
       </button>

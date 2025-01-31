@@ -44,7 +44,7 @@ export default function Navbar() {
           onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
           className="absolute top-0 right-0 p-2 bg-transparent z-50 focus:outline-none"
         >
-          <SquareMenu className='text-black size-10'/>
+          <SquareMenu className='text-white size-10'/>
         </button>
       );
     }
@@ -55,9 +55,9 @@ export default function Navbar() {
       {!isHamburger ? (
         <nav
           aria-label="Main Navigation"
-          className="bg-[#FFF200] flex flex-col w-full mx-auto py-8 justify-center"
+          className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
         >
-          <ul className="flex gap-16 justify-center  text-[#ED1C24] text-xl">
+          <ul className="flex gap-16 justify-center  text-[#FFF200] text-xl">
             <li>
               <Link href="/">
                 <Image src="/logo.svg" alt="Logo" width={30} height={30} />

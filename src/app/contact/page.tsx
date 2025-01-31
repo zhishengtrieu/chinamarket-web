@@ -1,7 +1,9 @@
 export const metadata = {
   title: 'Contactez-nous',
 }
-
+/*
+  <p className="mb-2">Email : contact@chinamarket.fr</p>
+*/
 export default function ContactPage() {
   return (
     <div className="bg-background flex-1">
@@ -15,7 +17,6 @@ export default function ContactPage() {
           <h2 className="text-2xl font-semibold mb-4">Coordonnées</h2>
           <p className="mb-2">Adresse : 1 Rue Villebois Mareuil, 54000 Nancy</p>
           <p className="mb-2">Téléphone : 03 83 27 97 59</p>
-          <p className="mb-2">Email : contact@chinamarket.fr</p>
         </div>
         <div>
           <h2 className="text-2xl font-semibold mb-4">Heures d&apos;ouverture</h2>
