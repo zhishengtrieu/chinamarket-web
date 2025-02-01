@@ -12,7 +12,8 @@ export default function ContactPage() {
           <h1 className="text-4xl font-extrabold mb-4">Contactez-nous</h1>
         </div>
       </header>
-      <section className="container mx-auto flex flex-col md:flex-row justify-center gap-8 md:gap-20 text-center md:text-left">
+      <section
+        className="container mx-auto flex flex-col md:flex-row justify-center gap-8 md:gap-20 text-center md:text-left">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Coordonnées</h2>
           <p className="mb-2">Adresse : 1 Rue Villebois Mareuil, 54000 Nancy</p>
