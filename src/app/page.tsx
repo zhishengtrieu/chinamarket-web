@@ -1,12 +1,17 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex-grow">
-      <header 
-        className="relative w-full h-64 md:h-screen flex flex-col items-center justify-center bg-cover bg-center text-white text-center px-4" 
-        style={{ backgroundImage: "url('/chinese_meal.jpg')" }}
-      >
+      <header className="relative w-full h-64 md:h-screen flex flex-col items-center justify-center text-white text-center px-4">
+      <Image
+        src="/chinese_meal.jpg" 
+        alt="Repas chinois traditionnel"
+        fill 
+        className="absolute inset-0 z-0 object-cover"
+        priority 
+        sizes="100vw"
+      />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         
         <div className="relative z-10 max-w-2xl">
