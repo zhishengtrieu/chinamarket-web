@@ -1,10 +1,11 @@
 "use client";
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 import HamburgerNav from './HamburgerNav';
 import { useState, useEffect } from 'react';
 import { SquareMenu } from 'lucide-react';
 import { links } from '@/data/menu';
+import { AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isHamburger, setHamburger] = useState(false);
@@ -34,20 +35,21 @@ export default function Navbar() {
   }, [isHamburgerOpen]);
 
   function hamburgerNavBar() {
-    if (isHamburgerOpen) {
-      return (
-        <HamburgerNav onClose={() => setIsHamburgerOpen(false)} />
-      );
-    } else {
-      return (
+    return (
+      <>
         <button
-          onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
+          onClick={() => setIsHamburgerOpen(true)}
           className="absolute top-0 right-0 p-2 bg-transparent z-50 focus:outline-none"
         >
-          <SquareMenu className='text-white size-10'/>
+          <SquareMenu className='text-[#FFF200] size-10'/>
         </button>
-      );
-    }
+        <AnimatePresence>
+          {isHamburgerOpen && (
+            <HamburgerNav onClose={() => setIsHamburgerOpen(false)} />
+          )}
+        </AnimatePresence>
+      </>
+    );
   }
 
   return (
@@ -57,7 +59,7 @@ export default function Navbar() {
           aria-label="Main Navigation"
           className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
         >
-          <ul className="flex gap-16 justify-center  text-[#FFF200] text-xl">
+          <ul className="flex gap-16 justify-center text-[#FFF200] text-xl">
             <li>
               <Link href="/">
                 <Image src="/logo.svg" alt="Logo" width={30} height={30} />
@@ -71,7 +73,12 @@ export default function Navbar() {
           </ul>
         </nav>
       ) : (
-        <div>{hamburgerNavBar()}</div>
+        <nav
+          aria-label="Main Navigation"
+          className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
+        >
+          <div>{hamburgerNavBar()}</div>
+        </nav>
       )}
     </>
   );

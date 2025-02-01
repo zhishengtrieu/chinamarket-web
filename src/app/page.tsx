@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex-grow">
-      <header className="relative w-full h-64 md:h-screen flex flex-col items-center justify-center text-white text-center px-4">
+      <header className="relative w-full md:h-screen flex flex-col items-center justify-center text-white text-center p-10">
       <Image
         src="/chinese_meal.jpg" 
         alt="Repas chinois traditionnel"

@@ -1,7 +1,8 @@
 import React from "react";
-import Link from 'next/link'
+import Link from 'next/link';
 import { CircleX } from 'lucide-react';
 import { links } from '@/data/menu';
+import { motion } from "framer-motion";
 
 interface HamburgerNavProps {
   onClose: () => void;
@@ -9,7 +10,13 @@ interface HamburgerNavProps {
 
 export default function HamburgerNav({ onClose }: HamburgerNavProps) {
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center bg-[#ED1C24] text-[#FFF200] overflow-y-hidden">
+    <motion.div 
+      initial={{ opacity: 0, y: "-100%" }} 
+      animate={{ opacity: 1, y: 0 }} 
+      exit={{ opacity: 0, y: "-100%" }} 
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed inset-0 z-50 flex justify-center items-center bg-[#ED1C24] text-[#FFF200] overflow-y-hidden"
+    >
       <button className="p-2 fixed top-0 right-0 flex justify-end" onClick={onClose}>
         <CircleX className=" size-10" />
       </button>
@@ -25,6 +32,6 @@ export default function HamburgerNav({ onClose }: HamburgerNavProps) {
           ))}
         </ul>
       </nav>
-    </div>
+    </motion.div>
   );
 }

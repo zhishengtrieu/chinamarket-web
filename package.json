@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "framer-motion": "^12.0.6",
     "lucide-react": "^0.468.0",
     "next": "15.1.1",
     "react": "^19.0.0",
