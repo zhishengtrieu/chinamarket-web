@@ -53,12 +53,11 @@ export default function Navbar() {
   }
 
   return (
-    <>
+    <nav
+      aria-label="Main Navigation"
+      className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
+    >
       {!isHamburger ? (
-        <nav
-          aria-label="Main Navigation"
-          className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
-        >
           <ul className="flex gap-16 justify-center text-[#FFF200] text-xl">
             <li>
               <Link href="/">
@@ -71,15 +70,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-        </nav>
       ) : (
-        <nav
-          aria-label="Main Navigation"
-          className="bg-[#ED1C24] flex flex-col w-full mx-auto py-8 justify-center"
-        >
           <div>{hamburgerNavBar()}</div>
-        </nav>
       )}
-    </>
+    </nav>
   );
 }
