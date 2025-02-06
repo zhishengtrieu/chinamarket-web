@@ -17,7 +17,7 @@ export default function AboutHome() {
             à apporter des saveurs authentiques au quartier Mon Désert.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Depuis 2008, notre épicerie s’efforce de créer un espace accueillant où les amateurs de cuisine
+            Depuis 2008, notre épicerie s&apos;efforce de créer un espace accueillant où les amateurs de cuisine
             asiatique peuvent trouver leur bonheur.
           </p>
           <p className="text-lg text-gray-700 mb-4">
