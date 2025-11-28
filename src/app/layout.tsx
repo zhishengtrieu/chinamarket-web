@@ -18,6 +18,7 @@ const title = 'China Market';
 const description = "China Market Wan Jia Long - Votre épicerie asiatique de confiance à Nancy. Découvrez nos produits authentiques et frais pour toutes vos envies culinaires asiatiques.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://chinamarket.fr'),
   title: {
     default: title,
     template: '%s | ' + title,
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
   description: description,
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+  alternates: {
+    canonical: "/"
   },
   openGraph: {
     title: title,

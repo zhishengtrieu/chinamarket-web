@@ -1,5 +1,9 @@
 export const metadata = {
   title: 'Contactez-nous',
+  description: 'Contactez China Market à Nancy pour toute question ou information sur nos produits et services.',
+  alternates: {
+    canonical: "/contact",
+  },
 }
 /*
   <p className="mb-2">Email : contact@chinamarket.fr</p>

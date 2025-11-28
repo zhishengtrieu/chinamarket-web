@@ -4,6 +4,9 @@ export const metadata = {
   title: "Notre magasin",
   description:
     "China Market - épicerie asiatique à Nancy. Horaires, contact, adresse et plan pour nous trouver.",
+  alternates: {
+    canonical: "/magasin",
+  },
 };
 
 
